@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ED4AD011BD35CF2322965BD /* Pods_TeenCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0986A7B75D66AA4498BBE5 /* Pods_TeenCard.framework */; };
+		7E4786321F51DAD600DD13E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786311F51DAD600DD13E2 /* User.swift */; };
+		7E4786341F51DB3600DD13E2 /* TeenUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786331F51DB3600DD13E2 /* TeenUser.swift */; };
+		7E4786361F51DB6300DD13E2 /* Guardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786351F51DB6300DD13E2 /* Guardian.swift */; };
+		7E4786381F51DBB200DD13E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786371F51DBB200DD13E2 /* Card.swift */; };
+		7E47863A1F51DBFA00DD13E2 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786391F51DBFA00DD13E2 /* History.swift */; };
 		FE89056E1F51D863009DB52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89056D1F51D863009DB52E /* AppDelegate.swift */; };
 		FE8905701F51D863009DB52E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89056F1F51D863009DB52E /* ViewController.swift */; };
 		FE8905731F51D863009DB52E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8905711F51D863009DB52E /* Main.storyboard */; };
@@ -46,6 +52,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		095575EE0D87EE5A4A363919 /* Pods-TeenCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeenCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeenCard/Pods-TeenCard.release.xcconfig"; sourceTree = "<group>"; };
+		0A0986A7B75D66AA4498BBE5 /* Pods_TeenCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeenCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5786B44AB9ED25D9A8BFFE06 /* Pods-TeenCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeenCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeenCard/Pods-TeenCard.debug.xcconfig"; sourceTree = "<group>"; };
+		7E4786311F51DAD600DD13E2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7E4786331F51DB3600DD13E2 /* TeenUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeenUser.swift; sourceTree = "<group>"; };
+		7E4786351F51DB6300DD13E2 /* Guardian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guardian.swift; sourceTree = "<group>"; };
+		7E4786371F51DBB200DD13E2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7E4786391F51DBFA00DD13E2 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		FE89056A1F51D863009DB52E /* TeenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89056D1F51D863009DB52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE89056F1F51D863009DB52E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,18 +105,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED4AD011BD35CF2322965BD /* Pods_TeenCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14190E6F7AE78410050F713C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5786B44AB9ED25D9A8BFFE06 /* Pods-TeenCard.debug.xcconfig */,
+				095575EE0D87EE5A4A363919 /* Pods-TeenCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1AFB2AD5DAD02C9F88A31879 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A0986A7B75D66AA4498BBE5 /* Pods_TeenCard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE8905611F51D863009DB52E = {
 			isa = PBXGroup;
 			children = (
 				FE89057F1F51D8A5009DB52E /* Agillitas */,
 				FE89056C1F51D863009DB52E /* TeenCard */,
 				FE89056B1F51D863009DB52E /* Products */,
+				14190E6F7AE78410050F713C /* Pods */,
+				1AFB2AD5DAD02C9F88A31879 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +157,11 @@
 				FE8905741F51D863009DB52E /* Assets.xcassets */,
 				FE8905761F51D863009DB52E /* LaunchScreen.storyboard */,
 				FE8905791F51D863009DB52E /* Info.plist */,
+				7E4786311F51DAD600DD13E2 /* User.swift */,
+				7E4786331F51DB3600DD13E2 /* TeenUser.swift */,
+				7E4786351F51DB6300DD13E2 /* Guardian.swift */,
+				7E4786371F51DBB200DD13E2 /* Card.swift */,
+				7E4786391F51DBFA00DD13E2 /* History.swift */,
 			);
 			path = TeenCard;
 			sourceTree = "<group>";
@@ -188,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE89057C1F51D863009DB52E /* Build configuration list for PBXNativeTarget "TeenCard" */;
 			buildPhases = (
+				FF4CF2EEC1072DCD265D1757 /* [CP] Check Pods Manifest.lock */,
 				FE8905661F51D863009DB52E /* Sources */,
 				FE8905671F51D863009DB52E /* Frameworks */,
 				FE8905681F51D863009DB52E /* Resources */,
+				DEB1B9264CBB24DECB49ED2B /* [CP] Embed Pods Frameworks */,
+				4C0DB4CD1FC0694096DF0BC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +291,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C0DB4CD1FC0694096DF0BC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeenCard/Pods-TeenCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB1B9264CBB24DECB49ED2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeenCard/Pods-TeenCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4CF2EEC1072DCD265D1757 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE8905661F51D863009DB52E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,12 +346,14 @@
 			files = (
 				FE8905BF1F51D8A6009DB52E /* Models.swift in Sources */,
 				FE8905B01F51D8A5009DB52E /* NovoCartaoPortadorEndereco.swift in Sources */,
+				7E47863A1F51DBFA00DD13E2 /* History.swift in Sources */,
 				FE8905A81F51D8A5009DB52E /* CadastroBenificiario.swift in Sources */,
 				FE8905BB1F51D8A6009DB52E /* StatusCartaoResponse.swift in Sources */,
 				FE8905A21F51D8A5009DB52E /* APIHelper.swift in Sources */,
 				FE8905A71F51D8A5009DB52E /* Extensions.swift in Sources */,
 				FE8905AD1F51D8A5009DB52E /* NovoCartao.swift in Sources */,
 				FE8905A11F51D8A5009DB52E /* AlamofireImplementations.swift in Sources */,
+				7E4786381F51DBB200DD13E2 /* Card.swift in Sources */,
 				FE8905B81F51D8A6009DB52E /* SetSaldo.swift in Sources */,
 				FE8905A61F51D8A5009DB52E /* APIs.swift in Sources */,
 				FE8905AB1F51D8A5009DB52E /* ExtratoResponse.swift in Sources */,
@@ -276,14 +368,17 @@
 				FE8905A51F51D8A5009DB52E /* TransferenciasAPI.swift in Sources */,
 				FE8905BD1F51D8A6009DB52E /* TransferenciaCadastroBenificiario.swift in Sources */,
 				FE8905B61F51D8A6009DB52E /* SetNovoCartao.swift in Sources */,
+				7E4786341F51DB3600DD13E2 /* TeenUser.swift in Sources */,
 				FE8905BC1F51D8A6009DB52E /* Transferencia.swift in Sources */,
 				FE8905AE1F51D8A5009DB52E /* NovoCartaoPortador.swift in Sources */,
+				7E4786321F51DAD600DD13E2 /* User.swift in Sources */,
 				FE8905A91F51D8A5009DB52E /* DetalhamentoExtrato.swift in Sources */,
 				FE8905AA1F51D8A5009DB52E /* EnderecoPortador.swift in Sources */,
 				FE8905AC1F51D8A5009DB52E /* MsgErro.swift in Sources */,
 				FE8905A31F51D8A5009DB52E /* CartoesAPI.swift in Sources */,
 				FE8905B11F51D8A5009DB52E /* Pagamento.swift in Sources */,
 				FE8905A41F51D8A5009DB52E /* PagamentosAPI.swift in Sources */,
+				7E4786361F51DB6300DD13E2 /* Guardian.swift in Sources */,
 				FE8905B91F51D8A6009DB52E /* SetSaldoValor.swift in Sources */,
 				FE8905AF1F51D8A5009DB52E /* NovoCartaoPortadorContato.swift in Sources */,
 				FE8905B31F51D8A5009DB52E /* PortadorResponse.swift in Sources */,
@@ -409,6 +504,7 @@
 		};
 		FE89057D1F51D863009DB52E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5786B44AB9ED25D9A8BFFE06 /* Pods-TeenCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UMGS9WR96D;
@@ -422,6 +518,7 @@
 		};
 		FE89057E1F51D863009DB52E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095575EE0D87EE5A4A363919 /* Pods-TeenCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UMGS9WR96D;
@@ -452,6 +549,7 @@
 				FE89057E1F51D863009DB52E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

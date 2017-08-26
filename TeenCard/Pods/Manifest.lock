@@ -1,0 +1,15 @@
+PODS:
+  - AgillitasClient (1.0.0):
+    - Alamofire (~> 4.0)
+  - Alamofire (4.4.0)
+
+DEPENDENCIES:
+  - AgillitasClient
+
+SPEC CHECKSUMS:
+  AgillitasClient: 48c7cacdc1b5b2c3fcc52a8620c7079840488c40
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+
+PODFILE CHECKSUM: 7b0f3ac312a560c2a118863b5a9dda6fe5449399
+
+COCOAPODS: 1.2.0
