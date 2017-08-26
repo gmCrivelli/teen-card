@@ -10,9 +10,6 @@ import UIKit
 
 class History: NSObject {
     
-    var date:Date
-    var store:String
-    var type:String
-    var value:Float
+   
 
 }

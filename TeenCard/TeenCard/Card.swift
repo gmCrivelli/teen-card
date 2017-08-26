@@ -10,8 +10,6 @@ import UIKit
 
 class Card: NSObject {
 
-    var number: String
-    var password: String
-    var availableFunds:Float
-    var history:History
+   
+    var history:History?
 }

@@ -8,15 +8,20 @@
 
 import UIKit
 
-class User: NSObject {
+class User: NovoCartaoPortador {
     
-    var id: Int
-    var name: String
-    var lastName: String
-    var phone: String
-    var dateOfBirth: Date
-    var Cards: [Card]
-    var email:String
-    var CPF:String
-
+    private(set) static var shared = User()
+    var id: Int?
+    var name: String?
+    var lastName: String?
+    var phone: String?
+    var dateOfBirth: Date?
+    var Cards: [Card]?
+    var email:String?
+    var CPF:String?
+    
+    private override init() {
+        super.init()
+    }
+    
 }

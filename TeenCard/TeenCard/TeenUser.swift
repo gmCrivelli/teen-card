@@ -10,7 +10,7 @@ import UIKit
 
 class TeenUser: User{
     
-    var InterestingAreas:[String]
+    var InterestingAreas:[String]?
 
 
 }

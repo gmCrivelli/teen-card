@@ -129,6 +129,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E47863E1F51EC1700DD13E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E4786311F51DAD600DD13E2 /* User.swift */,
+				7E4786371F51DBB200DD13E2 /* Card.swift */,
+				7E4786391F51DBFA00DD13E2 /* History.swift */,
+				7E4786351F51DB6300DD13E2 /* Guardian.swift */,
+				7E4786331F51DB3600DD13E2 /* TeenUser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FE8905611F51D863009DB52E = {
 			isa = PBXGroup;
 			children = (
@@ -151,17 +163,13 @@
 		FE89056C1F51D863009DB52E /* TeenCard */ = {
 			isa = PBXGroup;
 			children = (
+				7E47863E1F51EC1700DD13E2 /* Model */,
 				FE89056D1F51D863009DB52E /* AppDelegate.swift */,
 				FE89056F1F51D863009DB52E /* ViewController.swift */,
 				FE8905711F51D863009DB52E /* Main.storyboard */,
 				FE8905741F51D863009DB52E /* Assets.xcassets */,
 				FE8905761F51D863009DB52E /* LaunchScreen.storyboard */,
 				FE8905791F51D863009DB52E /* Info.plist */,
-				7E4786311F51DAD600DD13E2 /* User.swift */,
-				7E4786331F51DB3600DD13E2 /* TeenUser.swift */,
-				7E4786351F51DB6300DD13E2 /* Guardian.swift */,
-				7E4786371F51DBB200DD13E2 /* Card.swift */,
-				7E4786391F51DBFA00DD13E2 /* History.swift */,
 			);
 			path = TeenCard;
 			sourceTree = "<group>";
