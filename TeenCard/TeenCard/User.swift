@@ -7,21 +7,42 @@
 //
 
 import UIKit
+import CloudKit
 
 class User: NovoCartaoPortador {
     
-    private(set) static var shared = User()
+    //private(set) static var shared = User()
+    // Cloudkit Record
+    var record: CKRecord!
     var id: Int?
     var name: String?
     var lastName: String?
     var phone: String?
-    var dateOfBirth: Date?
     var Cards: [Card]?
     var email:String?
-    var CPF:String?
     
-    private override init() {
+   // private override init() {
+     //   super.init()
+   // }
+    /// receive the person record and load its informations
+    ///
+    /// - Parameter record: person record in the database
+    init(email: String) {
         super.init()
+        self.email = email
+        
     }
     
+    init(withRecord record: CKRecord) {
+        super.init()
+        self.record = record
+        self.id = record["iCloudId"] as? Int ?? 0
+        self.name = record["name"] as? String
+        self.email = record["email"] as? String
+        self.lastName = record["lastName"] as? String
+        self.phone = record["phone"] as? String
+        self.cpf = record["phone"] as? String
+        self.dataNascimento = record["dateOfBirth"] as? Date
+        
+    }
 }
