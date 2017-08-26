@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Card: NSObject {
+class Card:NovoCartao {
 
    
     var history:History?
