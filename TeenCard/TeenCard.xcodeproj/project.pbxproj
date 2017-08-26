@@ -60,6 +60,7 @@
 		7E4786351F51DB6300DD13E2 /* Guardian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guardian.swift; sourceTree = "<group>"; };
 		7E4786371F51DBB200DD13E2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		7E4786391F51DBFA00DD13E2 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		7E4786401F51F50900DD13E2 /* TeenCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenCard.entitlements; sourceTree = "<group>"; };
 		FE89056A1F51D863009DB52E /* TeenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89056D1F51D863009DB52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE89056F1F51D863009DB52E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		FE89056C1F51D863009DB52E /* TeenCard */ = {
 			isa = PBXGroup;
 			children = (
+				7E4786401F51F50900DD13E2 /* TeenCard.entitlements */,
 				7E47863E1F51EC1700DD13E2 /* Model */,
 				FE89056D1F51D863009DB52E /* AppDelegate.swift */,
 				FE89056F1F51D863009DB52E /* ViewController.swift */,
@@ -263,8 +265,16 @@
 				TargetAttributes = {
 					FE8905691F51D863009DB52E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = UMGS9WR96D;
+						DevelopmentTeam = H3K85CCEUB;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -515,10 +525,11 @@
 			baseConfigurationReference = 5786B44AB9ED25D9A8BFFE06 /* Pods-TeenCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UMGS9WR96D;
+				CODE_SIGN_ENTITLEMENTS = TeenCard/TeenCard.entitlements;
+				DEVELOPMENT_TEAM = H3K85CCEUB;
 				INFOPLIST_FILE = TeenCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCard;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -529,10 +540,11 @@
 			baseConfigurationReference = 095575EE0D87EE5A4A363919 /* Pods-TeenCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UMGS9WR96D;
+				CODE_SIGN_ENTITLEMENTS = TeenCard/TeenCard.entitlements;
+				DEVELOPMENT_TEAM = H3K85CCEUB;
 				INFOPLIST_FILE = TeenCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCard;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
