@@ -16,6 +16,7 @@
 		7E47864B1F51FF9500DD13E2 /* UserServicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */; };
 		7E47864E1F5202EC00DD13E2 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E47864D1F5202EC00DD13E2 /* ErrorController.swift */; };
 		7E4786501F52100200DD13E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E47864F1F52100200DD13E2 /* CloudKit.framework */; };
+		7E4786521F521F0700DD13E2 /* CardServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786511F521F0700DD13E2 /* CardServiceDelegate.swift */; };
 		FE89056E1F51D863009DB52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89056D1F51D863009DB52E /* AppDelegate.swift */; };
 		FE8905701F51D863009DB52E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89056F1F51D863009DB52E /* ViewController.swift */; };
 		FE8905731F51D863009DB52E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8905711F51D863009DB52E /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServicesDelegate.swift; sourceTree = "<group>"; };
 		7E47864D1F5202EC00DD13E2 /* ErrorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
 		7E47864F1F52100200DD13E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		7E4786511F521F0700DD13E2 /* CardServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardServiceDelegate.swift; sourceTree = "<group>"; };
 		FE89056A1F51D863009DB52E /* TeenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89056D1F51D863009DB52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE89056F1F51D863009DB52E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 				7E4786311F51DAD600DD13E2 /* User.swift */,
 				7E4786371F51DBB200DD13E2 /* Card.swift */,
 				7E4786391F51DBFA00DD13E2 /* History.swift */,
-				7E4786351F51DB6300DD13E2 /* Guardian.swift */,
 				7E4786331F51DB3600DD13E2 /* TeenUser.swift */,
 			);
 			name = Model;
@@ -158,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */,
+				7E4786511F521F0700DD13E2 /* CardServiceDelegate.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -200,6 +202,7 @@
 				FE89056D1F51D863009DB52E /* AppDelegate.swift */,
 				FE89056F1F51D863009DB52E /* ViewController.swift */,
 				FE8905711F51D863009DB52E /* Main.storyboard */,
+				7E4786351F51DB6300DD13E2 /* Guardian.swift */,
 				FE8905741F51D863009DB52E /* Assets.xcassets */,
 				FE8905761F51D863009DB52E /* LaunchScreen.storyboard */,
 				FE8905791F51D863009DB52E /* Info.plist */,
@@ -417,6 +420,7 @@
 				FE8905A61F51D8A5009DB52E /* APIs.swift in Sources */,
 				FE8905AB1F51D8A5009DB52E /* ExtratoResponse.swift in Sources */,
 				FE8905BE1F51D8A6009DB52E /* Valor.swift in Sources */,
+				7E4786521F521F0700DD13E2 /* CardServiceDelegate.swift in Sources */,
 				FE8905B21F51D8A5009DB52E /* Portador.swift in Sources */,
 				FE8905B71F51D8A6009DB52E /* SetPagamento.swift in Sources */,
 				FE8905B41F51D8A5009DB52E /* Saldo.swift in Sources */,
