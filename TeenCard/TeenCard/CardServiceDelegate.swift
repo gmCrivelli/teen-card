@@ -217,7 +217,7 @@ class CardServices : NSObject {
                 DispatchQueue.main.async {
                     self.delegate!.didUpdatedCard(newRecord: record!)
                 }
-            }else {
+            } else {
                 let errorInfo = ErrorController.shared.handleCKError(error: error as! CKError)
                 
                 if errorInfo.shouldRetry {
@@ -254,10 +254,5 @@ class CardServices : NSObject {
         
         return (serverValue + clientvalue - ancestorValue) as NSNumber
     }
-    
-
-
-    
-    
 
 }

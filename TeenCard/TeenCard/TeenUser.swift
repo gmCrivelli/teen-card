@@ -6,8 +6,6 @@
 //  Copyright © 2017 Gustavo De Mello Crivelli. All rights reserved.
 //
 
-import UIKit
-
 class TeenUser: User{
     
     var InterestingAreas:[String]?

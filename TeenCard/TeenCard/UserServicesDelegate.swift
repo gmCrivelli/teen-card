@@ -59,7 +59,6 @@ class UserServices {
     var delegate: UserServicesDelegate?
     let publicDB = CKContainer.default().publicCloudDatabase
     
-    
     // MARK: Query operations
     func getAllUser() {
         guard delegate != nil else {

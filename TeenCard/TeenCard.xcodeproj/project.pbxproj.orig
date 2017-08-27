@@ -58,10 +58,7 @@
 		FE8905F01F522562009DB52E /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905EF1F522562009DB52E /* AddUserViewController.swift */; };
 		FE8905F21F5236B2009DB52E /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F11F5236B2009DB52E /* RequestsViewController.swift */; };
 		FE8905F41F523A6B009DB52E /* DBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F31F523A6B009DB52E /* DBServices.swift */; };
-		FE8905F61F523C3B009DB52E /* RetrievalServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F51F523C3B009DB52E /* RetrievalServices.swift */; };
-		FE8905F81F5250D5009DB52E /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F71F5250D5009DB52E /* RequestCell.swift */; };
-		FE8905FA1F525672009DB52E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F91F525672009DB52E /* Request.swift */; };
-		FE8905FC1F5282FB009DB52E /* ExtratoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905FB1F5282FB009DB52E /* ExtratoController.swift */; };
+		FE8905F61F523C3B009DB52E /* CardServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F51F523C3B009DB52E /* CardServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,10 +118,7 @@
 		FE8905EF1F522562009DB52E /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		FE8905F11F5236B2009DB52E /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
 		FE8905F31F523A6B009DB52E /* DBServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBServices.swift; sourceTree = "<group>"; };
-		FE8905F51F523C3B009DB52E /* RetrievalServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrievalServices.swift; sourceTree = "<group>"; };
-		FE8905F71F5250D5009DB52E /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
-		FE8905F91F525672009DB52E /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		FE8905FB1F5282FB009DB52E /* ExtratoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtratoController.swift; sourceTree = "<group>"; };
+		FE8905F51F523C3B009DB52E /* CardServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +159,6 @@
 				7E4786371F51DBB200DD13E2 /* Card.swift */,
 				7E4786391F51DBFA00DD13E2 /* History.swift */,
 				7E4786331F51DB3600DD13E2 /* TeenUser.swift */,
-				FE8905F91F525672009DB52E /* Request.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -174,9 +167,12 @@
 			isa = PBXGroup;
 			children = (
 				7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */,
-				FE8905F51F523C3B009DB52E /* RetrievalServices.swift */,
+<<<<<<< HEAD
+				FE8905F51F523C3B009DB52E /* CardServices.swift */,
 				FE8905F31F523A6B009DB52E /* DBServices.swift */,
+=======
 				7E4786511F521F0700DD13E2 /* CardServiceDelegate.swift */,
+>>>>>>> 7473b298a4dcdc1a551b951d99a0e9b1e99f3974
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -185,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				7E47864D1F5202EC00DD13E2 /* ErrorController.swift */,
-				FE8905FB1F5282FB009DB52E /* ExtratoController.swift */,
 				FE89056F1F51D863009DB52E /* ViewController.swift */,
 				FE8905EF1F522562009DB52E /* AddUserViewController.swift */,
 				FE8905F11F5236B2009DB52E /* RequestsViewController.swift */,
@@ -297,7 +292,6 @@
 		FE8905EE1F522522009DB52E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FE8905F71F5250D5009DB52E /* RequestCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -448,7 +442,6 @@
 				FE8905EB1F51EBAD009DB52E /* VisaAPIClient.swift in Sources */,
 				FE8905A71F51D8A5009DB52E /* Extensions.swift in Sources */,
 				FE8905AD1F51D8A5009DB52E /* NovoCartao.swift in Sources */,
-				FE8905FC1F5282FB009DB52E /* ExtratoController.swift in Sources */,
 				FE8905A11F51D8A5009DB52E /* AlamofireImplementations.swift in Sources */,
 				7E4786381F51DBB200DD13E2 /* Card.swift in Sources */,
 				FE8905B81F51D8A6009DB52E /* SetSaldo.swift in Sources */,
@@ -463,7 +456,6 @@
 				FE8905B51F51D8A5009DB52E /* SetCardStatus.swift in Sources */,
 				FE8905BA1F51D8A6009DB52E /* SetTransferencia.swift in Sources */,
 				FE89056E1F51D863009DB52E /* AppDelegate.swift in Sources */,
-				FE8905FA1F525672009DB52E /* Request.swift in Sources */,
 				FE8905A51F51D8A5009DB52E /* TransferenciasAPI.swift in Sources */,
 				FE8905BD1F51D8A6009DB52E /* TransferenciaCadastroBenificiario.swift in Sources */,
 				FE8905B61F51D8A6009DB52E /* SetNovoCartao.swift in Sources */,
@@ -476,13 +468,12 @@
 				7E4786321F51DAD600DD13E2 /* User.swift in Sources */,
 				FE8905ED1F51EDEC009DB52E /* key.pem in Sources */,
 				FE8905A91F51D8A5009DB52E /* DetalhamentoExtrato.swift in Sources */,
-				FE8905F81F5250D5009DB52E /* RequestCell.swift in Sources */,
 				FE8905AA1F51D8A5009DB52E /* EnderecoPortador.swift in Sources */,
 				FE8905AC1F51D8A5009DB52E /* MsgErro.swift in Sources */,
 				FE8905A31F51D8A5009DB52E /* CartoesAPI.swift in Sources */,
 				FE8905B11F51D8A5009DB52E /* Pagamento.swift in Sources */,
 				FE8905A41F51D8A5009DB52E /* PagamentosAPI.swift in Sources */,
-				FE8905F61F523C3B009DB52E /* RetrievalServices.swift in Sources */,
+				FE8905F61F523C3B009DB52E /* CardServices.swift in Sources */,
 				7E4786361F51DB6300DD13E2 /* Guardian.swift in Sources */,
 				FE8905B91F51D8A6009DB52E /* SetSaldoValor.swift in Sources */,
 				FE8905AF1F51D8A5009DB52E /* NovoCartaoPortadorContato.swift in Sources */,

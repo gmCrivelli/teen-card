@@ -1,5 +1,5 @@
 //
-//  CardServices.swift
+//  RetrievalServices.swift
 //  TeenCard
 //
 //  Created by Gustavo De Mello Crivelli on 26/08/17.
@@ -12,7 +12,7 @@ import CloudKit
 class RetrievalServices {
     
     // Retrieves record asynchronously via predicate
-    static func retrieveRecord(with predicate: NSPredicate, recordType: String, completion: @escaping (CKRecord?) -> Void) {
+    static func retrieveRecord(with predicate: NSPredicate, recordType: String, completion: @escaping ([CKRecord]?) -> Void) {
         
         let publicDB = CKContainer.default().publicCloudDatabase
         
@@ -21,9 +21,9 @@ class RetrievalServices {
         publicDB.perform(query, inZoneWith: nil, completionHandler: {
             results, error in
             if error == nil && results?.count == 1{
-                print("Card fetched\n")
+                print("Records fetched\n")
                 DispatchQueue.main.async {
-                    completion(results?[0])
+                    completion(results)
                 }
             }
         })

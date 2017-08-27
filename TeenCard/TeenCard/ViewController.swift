@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         
         
         super.viewDidLoad()
-        SwaggerClientAPI.customHeaders = ["client_id" : "6d44965e-5644-31f8-ae3c-47fb3fd9e6b5", "access_token" : "fd8e66f8-176e-39e4-9ef8-c6d2faf58278"]
+        SwaggerClientAPI.customHeaders = ["client_id" : "6d44965e-5644-31f8-ae3c-47fb3fd9e6b5", "access_token" : "b9b9c58a-2cd2-353d-9371-bed3ce9e6394"]
                 
         CartoesAPI.cartoesIdCartaoExtratoGet(idCartao: "3713100019350", dataInicial: Date(), dataFinal: Date()) { (response: ExtratoResponse?, error: Error?) in
             if let lista = response?.extrato {

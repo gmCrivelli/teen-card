@@ -36,7 +36,7 @@ class AddUserViewController: UIViewController {
         userServices.createUser(user: user)
     
         super.viewDidLoad()
-        SwaggerClientAPI.customHeaders = ["client_id" : "6d44965e-5644-31f8-ae3c-47fb3fd9e6b5", "access_token" : "fd8e66f8-176e-39e4-9ef8-c6d2faf58278"]
+        SwaggerClientAPI.customHeaders = ["client_id" : "6d44965e-5644-31f8-ae3c-47fb3fd9e6b5", "access_token" : "b9b9c58a-2cd2-353d-9371-bed3ce9e6394"]
         
         // Do any additional setup after loading the view, typically from a nib.
     }
