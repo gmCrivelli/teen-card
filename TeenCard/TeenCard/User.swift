@@ -36,7 +36,7 @@ class User: NovoCartaoPortador {
     init(withRecord record: CKRecord) {
         super.init()
         self.record = record
-        self.id = record["iCloudId"] as? Int ?? 0
+        self.id = record["id"] as? Int ?? 0
         self.name = record["name"] as? String
         self.email = record["email"] as? String
         self.lastName = record["lastName"] as? String

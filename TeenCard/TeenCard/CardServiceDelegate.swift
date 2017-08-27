@@ -1,5 +1,5 @@
 //
-//  UserServicesDelegate.swift
+//  CardServiceDelegate.swift
 //  TeenCard
 //
 //  Created by Yasmin Nogueira Spadaro Cropanisi on 26/08/17.
@@ -8,36 +8,34 @@
 
 import UIKit
 import CloudKit
-
-
 /// Responsibilities for the one who uses 'PersonServices'
-protocol UserServicesDelegate: NSObjectProtocol {
+protocol CardServicesDelegate: NSObjectProtocol {
     
     /// Received array of person from DB
     ///
     /// - Parameter User: array of Person
-    func didReceivedUser(user: [User])
+    func didReceivedCard(card: [Card])
     
     /// Called when it was unable to retrieve User data
-    func failedToGetUser(errorMessage: String)
+    func failedToGetCard(errorMessage: String)
     
     /// Called when a person record is created
     ///
     /// - Parameter record: person record
-    func didCreatedUser(record: CKRecord)
+    func didCreatedCard(record: CKRecord)
     
     /// Called when it was unable to create the person record
     ///
     /// - Parameter errorMessage: message describing the error to the user
-    func failedToCreateUser(errorMessage: String)
+    func failedToCreateCard(errorMessage: String)
     
     /// Called when a person record is updated
-    func didUpdatedUser(newRecord: CKRecord)
+    func didUpdatedCard(newRecord: CKRecord)
     
     /// Called when it was unable to update the person record
     ///
     /// - Parameter errorMessage: message describing the error to the user
-    func failedToUpdateUser(errorMessage: String)
+    func failedToUpdateCard(errorMessage: String)
     
     
     //    func didDeleteRecord()
@@ -45,34 +43,25 @@ protocol UserServicesDelegate: NSObjectProtocol {
     //    func failedToDelete(errorMessage: String)
     
 }
-extension UserServicesDelegate {
-    func didReceivedUser(user: [User]) {}
-    func failedToGetUser(errorMessage: String) {}
-    func didCreatedUser(record: CKRecord) {}
-    func failedToCreateUser(errorMessage: String){}
-    func didUpdatedUser(newRecord: CKRecord) {}
-    func failedToUpdateUser(errorMessage: String){}
+
+class CardServices : NSObject {
     
-}
-class UserServices {
-    
-    var delegate: UserServicesDelegate?
+    var delegate: CardServicesDelegate?
     let publicDB = CKContainer.default().publicCloudDatabase
     
-    
     // MARK: Query operations
-    func getAllUser() {
+    func getAllCard() {
         guard delegate != nil else {
             print("There is no delegate\n")
             return
         }
         
-        let predicate = NSPredicate(format: "name != '-1'")
+        let predicate = NSPredicate(format: "number != '-1'")
         
         performQueryOperation(predicate: predicate)
     }
     
-    func getUser(id: String) {
+    func getCard(id: String) {
         guard delegate != nil else {
             print("There is no delegate\n")
             return
@@ -84,45 +73,47 @@ class UserServices {
         
     }
     
-    func getUser(name: String) {
+    func getCard(user: User){
+        
         guard delegate != nil else {
             print("There is no delegate\n")
             return
         }
         
-        let predicate = NSPredicate(format: "name == %@", name)
+        let userReference = CKReference(record: user.record, action: .deleteSelf)
+        let predicate = NSPredicate(format: "users CONTAINS %@", userReference)
         
         performQueryOperation(predicate: predicate)
     }
     
-    func getUser(email: String) {
+    func getCard(number: String) {
         guard delegate != nil else {
             print("There is no delegate\n")
             return
         }
         
-        let predicate = NSPredicate(format: "email == %@", email)
+        let predicate = NSPredicate(format: "number == %@", number)
         
         performQueryOperation(predicate: predicate)
     }
     
     func performQueryOperation(predicate: NSPredicate){
-        var users = [User]()
+        var cards = [Card]()
         
-        let query = CKQuery(recordType: "User", predicate: predicate)
-        query.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        let query = CKQuery(recordType: "Card", predicate: predicate)
+        
         
         let queryOp = CKQueryOperation(query: query)
         queryOp.recordFetchedBlock = { record in
-            let user = User(withRecord: record)
-            users.append(user)
+            let card = Card(withRecord: record)
+            cards.append(card)
         }
         queryOp.queryCompletionBlock = { (cursor, error) in
             if error == nil {
                 // TODO: usar cursor para carregar o resto dos dados
-                print("User fetched la ala alamla ala a\n")
+                print("Card fetched\n")
                 DispatchQueue.main.async {
-                    self.delegate!.didReceivedUser(user: users)
+                    self.delegate!.didReceivedCard(card: cards)
                 }
             }else {
                 let errorInfo = ErrorController.shared.handleCKError(error: error as! CKError)
@@ -133,7 +124,7 @@ class UserServices {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        self.delegate!.failedToGetUser(errorMessage: errorInfo.message)
+                        self.delegate!.failedToGetCard(errorMessage: errorInfo.message)
                     }
                 }
             }
@@ -144,7 +135,7 @@ class UserServices {
     
     
     // MARK: Create record operation
-    func createUser(user: User) {
+    func createCard(card: Card) {
         // TODO: verificar se ja nao existe usuario com esse nome
         
         guard delegate != nil else {
@@ -152,39 +143,38 @@ class UserServices {
             return
         }
         
-        let userRecord = CKRecord(recordType: "User")
+        let userRecord = CKRecord(recordType: "Card")
         
-        userRecord["id"] = user.id! as NSInteger as CKRecordValue
-        userRecord["lastname"] = user.lastName! as NSString
-        userRecord["CPF"] = user.cpf! as NSString
-        userRecord["dateOfBirth"] = user.dataNascimento as! CKRecordValue
-        userRecord["phone"] = user.phone as! NSString
+        userRecord["id"] = card.id! as NSInteger as CKRecordValue
+        userRecord["number"] = card.number! as NSString
+        userRecord["found"] = card.valor as! CKRecordValue
+        userRecord["countersign"] = card.contrasenha! as NSString
+        userRecord["blocked"] = card.blocked! as NSInteger as CKRecordValue
         
-        if let name = user.nome {
-            userRecord["name"] = name as NSString
+        var users = [CKReference]()
+        for user in card.users! {
+            users.append(CKReference(record: user.record, action: .none))
         }
-        if let email = user.email {
-            userRecord["email"] = email as NSString
-        }
-       
-       
+        userRecord["users"] = users as NSArray
+        
         self.publicDB.save(userRecord){
             (record, error) in
             if error == nil {
-                print("User created\n")
+                print("Card created\n")
                 DispatchQueue.main.async {
-                    self.delegate!.didCreatedUser(record: record!)
+                    self.delegate!.didCreatedCard(record: record!)
                 }
             }else {
                 let errorInfo = ErrorController.shared.handleCKError(error: error as! CKError)
+                print("error")
                 
                 if errorInfo.shouldRetry {
                     DispatchQueue.main.async {
-                        self.createUser(user: user)
+                        self.createCard(card: card)
                     }
                 } else {
                     DispatchQueue.main.async {
-                        self.delegate!.failedToCreateUser(errorMessage: errorInfo.message)
+                        self.delegate!.failedToCreateCard(errorMessage: errorInfo.message)
                     }
                 }
             }
@@ -193,56 +183,46 @@ class UserServices {
     }
     
     // MARK: Update record operation
-    func updateUser(user: User) {
+    func updateCard(card: Card) {
         guard delegate != nil else {
             print("There is no delegate\n")
             return
         }
         
-        guard user.record != nil else {
+        guard card.record != nil else {
             let message = "You must create the record before update it"
             print("Error: \(message)\n")
             DispatchQueue.main.async {
-                self.delegate!.failedToUpdateUser(errorMessage: message)
+                self.delegate!.failedToUpdateCard(errorMessage: message)
             }
             return
         }
-        let userRecord = CKRecord(recordType: "User")
-
-        userRecord["id"] = user.id! as NSInteger as CKRecordValue
-        userRecord["name"] = user.nome! as NSString
-        userRecord["lastname"] = user.lastName! as NSString
-        userRecord["CPF"] = user.cpf! as NSString
-        userRecord["dateOfBirth"] = user.dataNascimento as! CKRecordValue
-        userRecord["phone"] = user.phone as! NSString
+        let userRecord = CKRecord(recordType: "Card")
         
-        if let name = user.name {
-            userRecord["name"] = name as NSString
-        }
-        if let email = user.email {
-            userRecord["email"] = email as NSString
-        }
+        userRecord["id"] = card.id! as NSInteger as CKRecordValue
+        userRecord["number"] = card.number! as NSString
+        userRecord["found"] = card.valor as! CKRecordValue
+        userRecord["countersign"] = card.contrasenha! as NSString
+        userRecord["blocked"] = card.blocked! as NSInteger as CKRecordValue
         
-     
-        
-        saveUpdatedRecord(of: user)
+        saveUpdatedRecord(of: card)
     }
     
-    private func saveUpdatedRecord(of user: User){
-        self.publicDB.save(user.record){
+    private func saveUpdatedRecord(of card: Card){
+        self.publicDB.save(card.record){
             (record, error) in
             if error == nil {
-                print("User updated\n")
+                print("Card updated\n")
                 //UserInfoController.shared.refresh()
                 DispatchQueue.main.async {
-                    self.delegate!.didUpdatedUser(newRecord: record!)
+                    self.delegate!.didUpdatedCard(newRecord: record!)
                 }
             }else {
                 let errorInfo = ErrorController.shared.handleCKError(error: error as! CKError)
                 
                 if errorInfo.shouldRetry {
                     DispatchQueue.main.async {
-                        self.saveUpdatedRecord(of: user)
+                        self.saveUpdatedRecord(of: card)
                     }
                 } else if errorInfo.concurrentAccessError {
                     let ckerror = error as! CKError
@@ -250,12 +230,12 @@ class UserServices {
                     let clientRecord = ckerror.userInfo[CKRecordChangedErrorClientRecordKey] as! CKRecord
                     let ancestorRecord = ckerror.userInfo[CKRecordChangedErrorAncestorRecordKey] as! CKRecord
                     
-                    user.record = serverRecord
-                    self.updateUser(user: user)
+                    card.record = serverRecord
+                    self.updateCard(card: card)
                     
                 }else {
                     DispatchQueue.main.async {
-                        self.delegate!.failedToUpdateUser(errorMessage: errorInfo.message)
+                        self.delegate!.failedToUpdateCard(errorMessage: errorInfo.message)
                     }
                 }
             }
@@ -274,7 +254,10 @@ class UserServices {
         
         return (serverValue + clientvalue - ancestorValue) as NSNumber
     }
+    
+
 
     
-}
+    
 
+}
