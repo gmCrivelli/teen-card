@@ -11,7 +11,7 @@ import UserNotifications
 import SafariServices
 
 fileprivate let viewActionIdentifier = "VIEW_IDENTIFIER"
-fileprivate let newsCategoryIdentifier = "NEWS_CATEGORY"
+fileprivate let categoryIdentifier = "REQUEST"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -68,12 +68,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                   options: [.foreground])
             
             // 2
-            let newsCategory = UNNotificationCategory(identifier: newsCategoryIdentifier,
+            let requestCategory = UNNotificationCategory(identifier: categoryIdentifier,
                                                       actions: [viewAction],
                                                       intentIdentifiers: [],
                                                       options: [])
             // 3
-            UNUserNotificationCenter.current().setNotificationCategories([newsCategory])
+            UNUserNotificationCenter.current().setNotificationCategories([requestCategory])
             
             self.getNotificationSettings()
         }
@@ -109,7 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let aps = userInfo["aps"] as! [String: AnyObject]
         
-        // 1
+        // Silent notification: update list of requests
         if aps["content-available"] as? Int == 1 {
             //let podcastStore = PodcastStore.sharedStore
             // Refresh Podcast
@@ -137,12 +137,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let aps = userInfo["aps"] as! [String: AnyObject]
         
         // 2
-        if let newsItem = aps["link_url"] {
+        if let username = aps["username"] {
 
-            if response.actionIdentifier == viewActionIdentifier,
-                let url = URL(string: newsItem as! String) {
-                let safari = SFSafariViewController(url: url)
-                window?.rootViewController?.present(safari, animated: true, completion: nil)
+            if response.actionIdentifier == viewActionIdentifier {
+//                let url = URL(string: newsItem as! String) {
+//                let safari = SFSafariViewController(url: url)
+//                window?.rootViewController?.present(safari, animated: true, completion: nil)
+               let addUserVC = AddUserViewController()
+               addUserVC.username = username as! String
+               window?.rootViewController?.present(addUserVC, animated: true, completion: nil)
             }
         }
         

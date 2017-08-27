@@ -13,6 +13,9 @@
 		7E4786361F51DB6300DD13E2 /* Guardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786351F51DB6300DD13E2 /* Guardian.swift */; };
 		7E4786381F51DBB200DD13E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786371F51DBB200DD13E2 /* Card.swift */; };
 		7E47863A1F51DBFA00DD13E2 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4786391F51DBFA00DD13E2 /* History.swift */; };
+		7E47864B1F51FF9500DD13E2 /* UserServicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */; };
+		7E47864E1F5202EC00DD13E2 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E47864D1F5202EC00DD13E2 /* ErrorController.swift */; };
+		7E4786501F52100200DD13E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E47864F1F52100200DD13E2 /* CloudKit.framework */; };
 		FE89056E1F51D863009DB52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89056D1F51D863009DB52E /* AppDelegate.swift */; };
 		FE8905701F51D863009DB52E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89056F1F51D863009DB52E /* ViewController.swift */; };
 		FE8905731F51D863009DB52E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8905711F51D863009DB52E /* Main.storyboard */; };
@@ -51,6 +54,10 @@
 		FE8905BF1F51D8A6009DB52E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905A01F51D8A5009DB52E /* Models.swift */; };
 		FE8905EB1F51EBAD009DB52E /* VisaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905EA1F51EBAD009DB52E /* VisaAPIClient.swift */; };
 		FE8905ED1F51EDEC009DB52E /* key.pem in Sources */ = {isa = PBXBuildFile; fileRef = FE8905EC1F51EDEC009DB52E /* key.pem */; };
+		FE8905F01F522562009DB52E /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905EF1F522562009DB52E /* AddUserViewController.swift */; };
+		FE8905F21F5236B2009DB52E /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F11F5236B2009DB52E /* RequestsViewController.swift */; };
+		FE8905F41F523A6B009DB52E /* DBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F31F523A6B009DB52E /* DBServices.swift */; };
+		FE8905F61F523C3B009DB52E /* CardServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8905F51F523C3B009DB52E /* CardServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +70,9 @@
 		7E4786371F51DBB200DD13E2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		7E4786391F51DBFA00DD13E2 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		7E4786401F51F50900DD13E2 /* TeenCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeenCard.entitlements; sourceTree = "<group>"; };
+		7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServicesDelegate.swift; sourceTree = "<group>"; };
+		7E47864D1F5202EC00DD13E2 /* ErrorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
+		7E47864F1F52100200DD13E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FE89056A1F51D863009DB52E /* TeenCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89056D1F51D863009DB52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE89056F1F51D863009DB52E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +113,10 @@
 		FE8905A01F51D8A5009DB52E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		FE8905EA1F51EBAD009DB52E /* VisaAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisaAPIClient.swift; sourceTree = "<group>"; };
 		FE8905EC1F51EDEC009DB52E /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
+		FE8905EF1F522562009DB52E /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		FE8905F11F5236B2009DB52E /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
+		FE8905F31F523A6B009DB52E /* DBServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBServices.swift; sourceTree = "<group>"; };
+		FE8905F51F523C3B009DB52E /* CardServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED4AD011BD35CF2322965BD /* Pods_TeenCard.framework in Frameworks */,
+				7E4786501F52100200DD13E2 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,12 +144,13 @@
 		1AFB2AD5DAD02C9F88A31879 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E47864F1F52100200DD13E2 /* CloudKit.framework */,
 				0A0986A7B75D66AA4498BBE5 /* Pods_TeenCard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7E47863E1F51EC1700DD13E2 /* Model */ = {
+		7E47863E1F51EC1700DD13E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7E4786311F51DAD600DD13E2 /* User.swift */,
@@ -143,7 +159,28 @@
 				7E4786351F51DB6300DD13E2 /* Guardian.swift */,
 				7E4786331F51DB3600DD13E2 /* TeenUser.swift */,
 			);
-			name = Model;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7E4786491F51FF2500DD13E2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7E47864A1F51FF9500DD13E2 /* UserServicesDelegate.swift */,
+				FE8905F51F523C3B009DB52E /* CardServices.swift */,
+				FE8905F31F523A6B009DB52E /* DBServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		7E47864C1F5202DB00DD13E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E47864D1F5202EC00DD13E2 /* ErrorController.swift */,
+				FE89056F1F51D863009DB52E /* ViewController.swift */,
+				FE8905EF1F522562009DB52E /* AddUserViewController.swift */,
+				FE8905F11F5236B2009DB52E /* RequestsViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		FE8905611F51D863009DB52E = {
@@ -169,10 +206,12 @@
 		FE89056C1F51D863009DB52E /* TeenCard */ = {
 			isa = PBXGroup;
 			children = (
+				7E47863E1F51EC1700DD13E2 /* Models */,
+				FE8905EE1F522522009DB52E /* Views */,
+				7E47864C1F5202DB00DD13E2 /* Controllers */,
+				7E4786491F51FF2500DD13E2 /* Services */,
 				7E4786401F51F50900DD13E2 /* TeenCard.entitlements */,
-				7E47863E1F51EC1700DD13E2 /* Model */,
 				FE89056D1F51D863009DB52E /* AppDelegate.swift */,
-				FE89056F1F51D863009DB52E /* ViewController.swift */,
 				FE8905711F51D863009DB52E /* Main.storyboard */,
 				FE8905741F51D863009DB52E /* Assets.xcassets */,
 				FE8905761F51D863009DB52E /* LaunchScreen.storyboard */,
@@ -244,6 +283,13 @@
 			name = Visa;
 			sourceTree = "<group>";
 		};
+		FE8905EE1F522522009DB52E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,7 +325,7 @@
 				TargetAttributes = {
 					FE8905691F51D863009DB52E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = UMGS9WR96D;
+						DevelopmentTeam = H3K85CCEUB;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -289,7 +335,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -381,7 +427,9 @@
 			files = (
 				FE8905BF1F51D8A6009DB52E /* Models.swift in Sources */,
 				FE8905B01F51D8A5009DB52E /* NovoCartaoPortadorEndereco.swift in Sources */,
+				FE8905F21F5236B2009DB52E /* RequestsViewController.swift in Sources */,
 				7E47863A1F51DBFA00DD13E2 /* History.swift in Sources */,
+				FE8905F01F522562009DB52E /* AddUserViewController.swift in Sources */,
 				FE8905A81F51D8A5009DB52E /* CadastroBenificiario.swift in Sources */,
 				FE8905BB1F51D8A6009DB52E /* StatusCartaoResponse.swift in Sources */,
 				FE8905A21F51D8A5009DB52E /* APIHelper.swift in Sources */,
@@ -405,7 +453,10 @@
 				FE8905BD1F51D8A6009DB52E /* TransferenciaCadastroBenificiario.swift in Sources */,
 				FE8905B61F51D8A6009DB52E /* SetNovoCartao.swift in Sources */,
 				7E4786341F51DB3600DD13E2 /* TeenUser.swift in Sources */,
+				7E47864E1F5202EC00DD13E2 /* ErrorController.swift in Sources */,
 				FE8905BC1F51D8A6009DB52E /* Transferencia.swift in Sources */,
+				7E47864B1F51FF9500DD13E2 /* UserServicesDelegate.swift in Sources */,
+				FE8905F41F523A6B009DB52E /* DBServices.swift in Sources */,
 				FE8905AE1F51D8A5009DB52E /* NovoCartaoPortador.swift in Sources */,
 				7E4786321F51DAD600DD13E2 /* User.swift in Sources */,
 				FE8905ED1F51EDEC009DB52E /* key.pem in Sources */,
@@ -415,6 +466,7 @@
 				FE8905A31F51D8A5009DB52E /* CartoesAPI.swift in Sources */,
 				FE8905B11F51D8A5009DB52E /* Pagamento.swift in Sources */,
 				FE8905A41F51D8A5009DB52E /* PagamentosAPI.swift in Sources */,
+				FE8905F61F523C3B009DB52E /* CardServices.swift in Sources */,
 				7E4786361F51DB6300DD13E2 /* Guardian.swift in Sources */,
 				FE8905B91F51D8A6009DB52E /* SetSaldoValor.swift in Sources */,
 				FE8905AF1F51D8A5009DB52E /* NovoCartaoPortadorContato.swift in Sources */,
@@ -545,10 +597,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TeenCard/TeenCard.entitlements;
-				DEVELOPMENT_TEAM = UMGS9WR96D;
+				DEVELOPMENT_TEAM = H3K85CCEUB;
 				INFOPLIST_FILE = TeenCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCardProjectgmc;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCardProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -560,10 +612,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TeenCard/TeenCard.entitlements;
-				DEVELOPMENT_TEAM = UMGS9WR96D;
+				DEVELOPMENT_TEAM = H3K85CCEUB;
 				INFOPLIST_FILE = TeenCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCardProjectgmc;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.TeenCardProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
